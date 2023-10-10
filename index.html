@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strangebox</title>
+    <meta name="description" content="Strangebox es un proyecto de @Maruco_Mass y @Guillermo_Rubiolo pensado como excusa para practicar código.">
+    <link href="./normalize.css" rel="stylesheet" type="text/css" />
+    <link href="./estilo.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" href="./fav.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+    <meta name="theme-color" content="#78909C">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="shortcut icon" type="image/png" href="./fav.png">
+    <link rel="apple-touch-icon" href="./fav.png">
+    <link rel="apple-touch-startup-image" href="./fav.png">
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7NKVHL5Y5M"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-7NKVHL5Y5M');
+        </script>
+<!--
+                           .▄▄▄▄██████████▄▄                                   
+                        ▄▄████████████████████▄.                               
+                     ▄█████████████▌   ▀█████▀▀██▄                            
+                   ▄████████▀▀▀█████▄    ███▌  ████▄                          
+                  █████████     ██████▄▄█████▄███████▄                         
+                ███████████▄   ▄█████▀▀     ▀▀██▌  .███                       
+               ███████████████████▀             ▀▀██████.                      
+              ███████████████████▀                ▀██████                     
+             ███████▀       ▀███                   ▀██████▄.  ▄▄.            
+             ████████         ██.                     ▀████████▀              
+             ██████████▄▄▄▄▄▄████.                      ▀▀▀▀▀▀                 
+             █████████████████████▄▄.                                          
+             ██████████████▀      ▀██▄▄.                                        
+              ████████████        .██████▄▄.                                     
+               ██████████.      .▄████████████▄▄▄..                               
+             ║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║             
+             ║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║             
+             ║║║║║║║║║║║║▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒╜╙╙└║║║║║║║║║║║║             
+             ║║║║║║║║║║█████████████████████████▀  .▄▄  └║║║║║║║║║║             
+             ║║║║║║║║║█████████████████████████▌  ████▄. └║║║║║║║║║             
+             ║║║║║║║║║█████████████████████████▌  ██████ ┌║║║║║║║║║             
+             ║║║║║║║║║║█████████████████████████▄  ▀▀▀▀ ┌║║║║║║║║║║             
+             ║║║║║║║║║║║║▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒####║║║║║║║║║║║║             
+             ║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║             
+             ║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║             
+             ║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║             
+             ║║║║║║║║║║║║║║▒▓▒║║║║║║▓▓▓║▓▓▓║║║║║╢▒▓▓▓▒║║║║║║║║║║║║║             
+             ║║║║║║║║║║║║▒▓▓▓▓▓▒║║║║▓▓▓▒▓▓▓║║║║▒▓▓▓▓▓▓▓║║║║║║║║║║║║             
+             ║║║║║║║║║║║║║║▓▓▓║║║║║║║▓▓▓▓▓║║║║║║║▒▒▓║║║║║║║║║║║║║║║             
+             ║║║║║║║║║║║║║║▓▓▓║║║║║║║║▒▓▒║║║║║║║║║▒▓║║║║║║║║║║║║║║║             
+             ║║║║║║║║║║║║║║▓▓▓║║║║║║║▓▓▓▓▓▒║║║║║║▓▓▒║║║║║║║║║║║║║║║             
+             ╙╠║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║╜             
+-->
+</head>
+                                                                              
+
+<body id="top">
+    
+    
+    <header class="auto sombra">        
+        <a class="auto" href="/index.html">
+            <img id="logo" src="Strangebox.svg" alt="home"  >
+            <img id="titulos" class="auto" src="./Logo.svg" alt="StrangeBox. ¿Qué hay en la caja?">
+            <!-- <div id="titulos" class="auto">
+                <h1>StrangeBox</h1>
+                <h2>Qué hay en la caja?</h2>  
+            </div> -->
+        </a>
+    </header>
+
+
+
+
+<!-- cuerpo -->
+<br>
+    
+    <div class="contenedormil auto">    
+        <ul id="proyectos">
+ 
+            <li class="proyect">
+                
+                <a class="caja sombra" href="hastalasmuelas/">
+                    <div class="manija auto"></div>
+                    <img class="auto" src="hastalasmuelas/icon.png" alt="Hasta Las Muelas">  
+                </a> 
+                <!--  -->
+                <div class="description">
+                    <h3>Hasta Las Muelas</h3>
+                    <p>Necesitas una excusa para beber? Acá tenes un drinking game. <br>
+                    Una serie de consignas que van variando más y más a medida que se juega. <br>
+                    Salud! 🍻 </p>
+                </div>
+            </li>
+
+           <hr> <!--  ####### separador ####### -->
+
+           <li class="proyect">
+                
+            <a class="caja sombra" href="tiratiro/">
+                <div class="manija auto"></div>
+                <img class="auto" src="tiratiro/fav.png" alt="Tira Tiro">  
+            </a> 
+            <!--  -->
+            <div class="description">
+                <h3>Tira Tiro</h3>
+                <p>Duelo a muerte con pistolas!<br>
+                Al sonar la campana, quien dispare primero gana el duelo. <br>
+                Bang! 🤠 </p>
+            </div>
+        </li>
+
+        <hr> <!--  ####### separador ####### -->
+
+        <li class="proyect">
+            <a class="caja sombra" href="caidalibre/">
+                <div class="manija auto"></div>
+                <img class="auto" src="caidalibre/fav.png" alt="Caida Libre">  
+            </a> 
+            <!--  -->
+            <div class="description">
+                <h3>Caida Libre</h3>
+                <p>Suelta el paracaídas y siente la adrenalina.<br>
+                Suerte! 🪂 </p>
+            </div>
+        </li>
+
+        <hr> <!--  ####### separador ####### -->
+
+        <li class="proyect">
+            <a class="caja sombra" href="botonera/">
+                <div class="manija auto"></div>
+                <img class="auto" src="botonera/fav.svg" alt="Caida Libre">  
+            </a> 
+            <!--  -->
+            <div class="description">
+                <h3>La Botonera</h3>
+                <p>Efectos de sonido para ambientar situaciones.<br>
+                Ideal para radios, streams y situaciones sociales.<br>
+                Cuack! 🦆</p>
+            </div>
+        </li>
+        
+        <hr> <!--  ####### separador ####### -->
+    
+        <li class="proyect">
+            
+            <a class="caja sombra" href="#top">
+                <div class="manija auto"></div>
+            </a>
+            <!--  -->
+            <div class="description">
+                <h3>Proximo Proyecto</h3>
+                <p>Coming soon. 📦</p>
+            </div>
+        </li>
+
+        <hr> <!--  ####### separador ####### -->
+
+            <li id="redes" class="proyect">
+                 
+             <a class="caja sombra" href="https://www.instagram.com/strangebox.com.ar/">
+                 <div class="manija auto"></div>
+                 <img class="auto" src="instagram.svg" alt="instagram">  
+             </a> 
+             <!--  -->
+             <a class="caja sombra" href="https://discord.gg/mnsgvYuwa5">
+                <div class="manija auto"></div>
+                <img class="auto" src="discord.svg" alt="discord">  
+            </a> 
+             <!--  -->
+             <a class="caja sombra" href="mailto:strangebox.dev@gmail.com">
+                <div class="manija auto"></div>
+                <img class="auto" src="gmail.svg" alt="gmail">  
+            </a> 
+             <!--  -->
+             <a class="caja sombra" href="https://twitter.com/StrangeBox_dev">
+                <div class="manija auto"></div>
+                <img class="auto" src="twitter.svg" alt="twitter">  
+            </a> 
+             <!--  -->
+             <a class="caja sombra" href="https://t.me/joinchat/bkah7j20TzdhMDIx">
+                <div class="manija auto"></div>
+                <img class="auto" src="telegram.svg" alt="Telegram">  
+            </a> 
+ 
+         </li>
+        </ul>
+    </div>
+    
+<!-- footer -->
+
+    <footer class="auto">
+        <a id="granmanija" href="#titulos" class="manija auto"></a>
+        <div class="contenedormil auto">
+            <a href="#top"><img id="loguito" src="Strangebox bw.svg" alt="StrangeBox" ></a>
+            <p> <b>Strangebox</b> es un proyecto de <a target="blank" href="https://www.instagram.com/Maruco_Mass"><strong>@</strong>Maruco_Mass</a> <strong>y</strong>  <a target="blank" href="https://www.instagram.com/guillermo_rubiolo/"><strong>@</strong>Guillermo_Rubiolo</a> pensado como excusa para practicar código.</p>
+            <a href="#top"><img id="iconitos" src="iconitos.svg"></a>
+        </div>
+        
+    </footer>
+
+
+<!-- script del scroll -->
+
+    <script>
+// apertura y cierre de caja:
+        window.addEventListener("scroll", function(){
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+    
+            const footer = document.querySelector('footer');
+            footer.classList.toggle('sticky', window.scrollY > 0);
+
+        });
+
+// Doble funcion del click en la manija del footer
+        var granManija = document.getElementById("granmanija");
+        granManija.addEventListener("click", function () {
+            setTimeout(() => {
+
+             if (granManija.hash !== '#titulos') {
+                    granManija.hash = '#titulos'
+                }else{
+                    granManija.hash = '#top'
+                }  
+            }, 50);
+        });
+
+    </script>
+
+</body>
+</html>

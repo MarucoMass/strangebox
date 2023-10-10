@@ -1,0 +1,555 @@
+
+*{
+    transition: 0.1s;
+
+}
+html{
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+    
+    color: #ECEFF1;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    min-height: 101vh;
+    background-color: #37474F;
+
+}
+
+.contenedormil{
+    max-width: 1000px;
+    overflow: hidden;
+    transition: 1s;
+}
+
+
+header{
+    background-color: #78909C;
+    font-family: sans-serif;
+    border-bottom: 3px solid #546E7A;
+    height: 50vh;
+    width: 100%;
+    overflow: hidden;
+    transition: 1s;
+    align-content: flex-end;
+}
+
+header.sticky{
+    height: 275px;
+    width: 1000px;
+    max-width: 95%;
+    border-radius: 0 0 10px 10px ;
+    padding: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px ;
+
+}
+
+
+#logo{
+    float: left;
+    width: 256px;
+    height: 256px;
+    display: inline;
+    margin-left: -20px;
+    transition: 1s;
+}
+
+header.sticky #logo{
+    margin-top: 115px;
+    width: 128px;
+    height: 128px;
+}
+
+
+
+header a{
+    margin-top: 50px;
+    width: 800px;
+    transition: 1s;
+
+}
+
+header.sticky a{
+    width: 670px;
+    margin-top: 25px;
+}
+
+a{
+    color: #CFD8DC;
+    text-decoration: none ;
+    transition: 1s;
+}
+
+/* h1 {
+    font-size: 100px;
+    text-shadow: 1px 5px #263238;
+    margin-bottom: 0%;
+    transition: 1s;
+}h1:hover{
+    color: white;
+}
+
+h2{
+    font-size: 28px;
+    text-shadow: 1px 3px #263238;
+    margin-top: -16px;
+    margin-left: 5px;
+    transition: 1s;
+}h2:hover{
+    color: white;
+} */
+
+#titulos{
+    float: left;
+    font-family: 'Roboto Slab', serif;
+    color: #ECEFF1;    
+    margin-top: 135px;
+    transition: 0.2s;
+    opacity: 85%;
+}#titulos:hover{
+    opacity: 100%;
+}
+
+
+/* ####################
+######## CUERPO ########
+ ##################### */
+
+
+#proyectos{
+    list-style: none;
+    overflow: hidden;
+    padding: 0px;
+    min-height:50%;
+    margin-bottom: 200px;
+}
+
+.proyect{
+    display: block;
+    overflow: hidden;
+}
+
+.caja{
+    padding: 2px;
+    background-color: #A98258;
+    border-top: solid 1px #F5BC7F;
+    border-bottom: solid 3px #5B4631;
+    margin: 12px;
+    /* margin-right: 25px; */
+    padding-top: 10px;
+    border-radius: 10px;
+    display: block;
+    width: 125px;
+    min-height: 118px;
+    text-decoration: none;
+    text-shadow: 0px 3px #263238;
+    float: left;
+}
+
+.manija{
+    height: 8px;
+    width: 40px;
+    border-radius: 4px;
+    border-top: solid 2px #263238;
+    border-bottom: solid 1px #F5BC7F;
+    background-color: #5B4631;
+    margin-bottom: 7px;
+    transition: 0.5s;
+}
+.manija:hover{
+    background-color: #473727;
+}
+
+.caja .manija:hover{
+    border-top: solid 2px #000;
+    border-bottom: solid 1px #C99C6D;
+}
+
+
+.caja img{
+    max-width: 95px;
+    max-height: 95px;
+    opacity: 75%;
+    mix-blend-mode:luminosity;
+    transition: 1s;
+    text-align: center;
+    vertical-align: bottom;
+
+}
+
+.caja img:hover {
+    opacity: 100%;
+    mix-blend-mode:normal;
+}
+
+.description{
+    font-size: large;
+    text-shadow: 2px 2px 1px black;
+    margin: 12px;
+}
+
+.description:hover{
+    color: white;
+}
+
+h3{
+    font-size: larger;
+    margin-bottom: 10px;
+    font-family: 'Roboto Slab', serif;
+    text-shadow: 1px 3px black;
+
+}
+.proyect p {
+    margin-top: 0;
+}
+
+hr{
+    opacity: 50%;
+    margin: 20px;
+}
+
+
+/* ############################# */
+/* ########## Redes ########### */
+/* ########################### */
+
+
+
+#redes{
+    margin-top: 60px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+#redes .caja{
+    margin: 10px;
+    min-width: 125px;
+}
+
+#redes img{
+    min-width: 95px ;
+}
+
+
+
+/* ############################# */
+/* ########## Footer ########## */
+/* ########################### */
+
+
+footer{
+    background-color: #A98258;
+
+    font-family: sans-serif;
+    border-top: 2px solid #F5BC7F;
+    bottom: 0;    
+    height: 50vh;
+    width: 100vw;
+    overflow: hidden;
+    transition: 1s;
+    position: fixed;
+}
+
+footer .contenedormil{
+    margin-top: 12vh;
+}
+
+footer.sticky .contenedormil{
+    margin-top: 0;
+}
+
+footer .manija{
+    height: 50px;
+    border-radius: 25px;
+    width: 350px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-top: solid 3px #263238;
+    border-bottom: solid 2px #F5BC7F;
+}
+
+footer.sticky .manija{
+    height: 30px;
+    border-radius: 15px;
+    width: 175px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+
+}
+
+footer.sticky{
+    width: 90vw;
+    padding: 10px 5vw 10px 5vw;
+    height: 115px;
+    border-radius: 20px 20px 0 0 ;
+    box-shadow: 0px -10px 10px #263238;
+
+}
+
+
+footer p{
+    margin-top: 0;
+    color: #5B4631;
+    max-width: 520px;
+    line-height: 150%;
+    text-shadow: 0px 1px #F5BC7F; 
+    float: left;
+    margin-right: 50px;
+    margin-left: 20px;
+    font-weight: 700;
+    font-size:x-large;
+    transition: 1s;
+    }
+
+footer.sticky p{
+    max-width: 650px;
+    font-size: large;
+    margin-left: auto;
+    margin-top: 32px;
+    line-height: 125%;
+}
+
+footer.sticky #iconitos{
+    height: 50px;
+    width: auto;
+}
+
+footer a{
+    color:#5B4631;
+}
+footer a:hover{
+    color:#263238;;
+}
+
+#loguito{
+    float: left;
+    height: 95px;
+    width: auto;
+    margin: 10px;
+    opacity: 50%;
+    mix-blend-mode:darken;
+    transition: 1s;
+}
+
+footer.sticky #loguito{
+    height: 65px;
+    width: auto;
+}
+
+#loguito:hover{
+    mix-blend-mode:normal;
+
+}
+
+#iconitos{
+    float: right;
+    height: 70px;
+    width: auto;
+    margin: 15px;
+    margin-top: 22px;
+    transition: 0.5s;
+}
+
+
+
+/* ###################################
+RESPONSIVE  ##########################
+###################################### */
+
+
+
+@media (max-width: 1050px)
+{
+    header a{
+        margin-top: 10px;
+        width: auto;
+        transition: 1s;
+        height: 100%;
+        display: flex;
+        align-content: flex-end;
+    }
+    .contenedormil{
+        max-width: 99vw;
+    }
+    #logo{
+        width: 40vw;
+        height: 40vw;
+        max-height: 25vh;
+        display: block;
+        margin: 0;
+        margin-top: 0;
+        margin-left: 30vw;
+        margin-right: 30vw;
+        float:none;
+    
+    }
+
+    #titulos{
+        float: none;
+        width:80vw;
+        margin: 0;
+        margin-top: 15px;
+        margin-right: 10vw;
+        margin-left: 10vw;
+    }
+
+    /* h1{
+        margin-top: 0;
+        font-size:60px;
+        margin-left: 5px;
+    }
+    h2{
+        font-size:17px;
+        margin-left: 8px;
+        line-height: 200%;
+    } */
+
+    header.sticky{
+        height:max-content;
+        padding-bottom: 0;
+    }
+
+    header.sticky #logo{
+        width: 30vw;
+        margin: 0;
+        float: left;
+    }
+
+    header.sticky #titulos{
+        width: 55vw;
+        margin: 1vw;
+        margin-top: 10%;
+        float: left;
+    }
+
+    .description{
+        display: block;
+        min-width: 75vw;
+    }
+
+    h3{
+        margin-top: 10px;
+    }
+    .proyect p{
+        display: flex;
+        margin-right: 20px;
+    }
+
+
+
+
+
+
+
+    #redes{
+        margin-top: 60px;
+        display: flex ;
+        align-items: center;
+    }
+    
+    #redes .caja{
+        margin: 5px;
+        min-width: auto;
+        max-width: 15vw;
+        max-height: 20vw;
+        min-height: auto;
+    }
+
+    #redes .manija{
+        height: 5px;
+        width: 25px;
+        border-radius: 3px;
+        margin-bottom: 7px;
+    }
+    
+    #redes img{
+        min-width: 66%;
+        max-width: 66% ;
+        margin-bottom: 5%;
+    }
+
+
+
+
+
+
+    footer{
+        padding: 0;
+    }
+    #granmanija{
+        width: 80vw;
+    }
+    footer.sticky #granmanija{
+        width: 50vw;
+    }
+
+    #loguito{
+        width: 15vw;
+    }
+    footer p{
+        margin-left: 0;
+        margin-top: 10px;
+        font-size:medium;
+        width: 65vw;
+        margin-right: 0%;
+    }
+    footer .contenedormil{
+        margin-top: 0;
+    }
+
+    footer.sticky #loguito{
+        margin-top: 15px;
+        width: 10vw;
+    }
+    footer.sticky p{
+        margin-top: 20px;
+        width: 70vw;
+        font-size: small;
+        margin-right: 0%;
+    }
+    footer.sticky #iconitos{
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ############################# */
+/* ##### Clases Generales ##### */
+/* ########################### */
+
+
+.auto{    display: block;    margin-left: auto;    margin-right: auto;   }
+.sombra{    box-shadow: 0px 5px 5px #263238;    }
+.border{    border: 1px solid red;    }  /*  para identificar  */
+.block{    display: block;  }
+.none{    display: none;   }
+
+#colores{
+color:#263238; /* sombras */ /* foother */
+color:#37474F; /* body */
+color:#455A64;
+color:#546E7A;
+color:#607D8B;
+color:#78909C;
+color:#90A4AE;
+color:#B0BEC5;
+color:#CFD8DC; /* links */ /* fondo de icono */
+color:#ECEFF1; /* texto */
+}
